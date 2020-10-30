@@ -3,6 +3,9 @@ class ShopsController < ApplicationController
 
   def index
     @shops = Shop.all
+    if params[:page]
+      @shops = Shop.all.page(params[:page])
+    end
     json_response(@shops)
   end
 

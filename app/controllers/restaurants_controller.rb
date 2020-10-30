@@ -3,6 +3,9 @@ class RestaurantsController < ApplicationController
 
   def index
     @restaurants = Restaurant.all
+    if params[:page]
+      @restaurants = Restaurant.all.page(params[:page])
+    end
     json_response(@restaurants)
   end
 
