@@ -15,6 +15,6 @@ private
   end
 
   def capitalize
-    # self.slogan = self.slogan.capitalize
+    self.slogan = self.slogan.capitalize
   end
 end

@@ -13,7 +13,7 @@ describe 'ShopsController#create', type: :request do
       expect(JSON.parse(response.body)['name']).to eq('Test Name')
       expect(JSON.parse(response.body)['industry']).to eq('Test Industry')
       expect(JSON.parse(response.body)['logo_url']).to eq('test logo_url')
-      expect(JSON.parse(response.body)['slogan']).to eq('test slogan')
+      expect(JSON.parse(response.body)['slogan']).to eq('Test slogan')
     end
   end
 
