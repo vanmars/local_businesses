@@ -38,12 +38,12 @@ describe 'Restaurant#show', :type => :request do
   before { get '/restaurants/100' }
     
   # Test Header
-  it 'returns status code 200' do
+  it 'returns status code 404' do
     expect(response).to have_http_status(:not_found)
   end
 
   # Test Body
-  it 'returns correct data' do
+  it 'returns correct error message' do
     expect(JSON.parse(response.body)['message']).to eq("Couldn't find Restaurant with 'id'=100")
   end
 
