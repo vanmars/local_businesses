@@ -15,6 +15,7 @@ private
   end
 
   def capitalize
-
+    self.description = self.description.capitalize
+    self.review = self.review.capitalize
   end
 end

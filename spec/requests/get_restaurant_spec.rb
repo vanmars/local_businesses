@@ -18,8 +18,8 @@ describe 'RestaurantsController#show', :type => :request do
     it 'returns correct data' do
       expect(JSON.parse(response.body)['name']).to eq('Test Name')
       expect(JSON.parse(response.body)['kind']).to eq('Test Kind')
-      expect(JSON.parse(response.body)['description']).to eq('test description')
-      expect(JSON.parse(response.body)['review']).to eq('test review')
+      expect(JSON.parse(response.body)['description']).to eq('Test description')
+      expect(JSON.parse(response.body)['review']).to eq('Test review')
     end
   end
 
