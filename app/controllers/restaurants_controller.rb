@@ -31,9 +31,5 @@ private
   def set_restaurant
     @restaurant = Restaurant.find(params[:id])
   end
-
-  def json_response(object, status=:ok)
-    render json: object, status: status
-  end
   
 end
