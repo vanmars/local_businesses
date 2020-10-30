@@ -1,5 +1,5 @@
 class RestaurantsController < ApplicationController
-  before_action :set_restaurant, :only [:show, :update, :destroy]
+  before_action :set_restaurant, only: [:show, :update, :destroy]
 
   def index
     @restaurants = Restaurant.all
@@ -16,11 +16,19 @@ class RestaurantsController < ApplicationController
   end
 
   def update
-    @restaurant.update!(restaurant_params)
+    if @restaurant.update!(restaurant_params)
+      render status: 200, json: {
+        message: 'Restaurant successfully updated.'
+      }
+    end
   end
 
   def destroy
-    @restaurant.destroy
+    if @restaurant.destroy
+      render status: 200, json: {
+        message: 'Restaurant successfully deleted.'
+      }
+    end
   end
 
 private
