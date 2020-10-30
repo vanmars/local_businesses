@@ -6,6 +6,15 @@ _30 October 2020_
 
 #### By _**Vanessa Stewart**_
 
+## Table of Contents
+1. [Description](https://github.com/vanmars/local_businesses#description)
+2. [API Call Documentation: Restaurants](https://github.com/vanmars/local_businesses#restaurants)
+3. [API Call Documentation: Shops](https://github.com/vanmars/local_businesses#shops)
+4. [Setup/Installation Requirements](https://github.com/vanmars/local_businesses#setupinstallation-requirements)
+5. [Known Bugs](https://github.com/vanmars/local_businesses#known-bugs)
+6. [Technologies Used](https://github.com/vanmars/local_businesses#technologies-used)
+7. [License](https://github.com/vanmars/local_businesses#license)
+
 ## Description
 
 _This is a Friday project for Epicodus. The original instructions for the project include:_
@@ -55,8 +64,6 @@ A README that thoroughly documents all endpoints, including parameters that can 
 | GET | /shops/search{name, kind, page} | Search for a shop by name or kind or both. Can enter a page paremeter to get results of 25 shops per page. |  http://localhost:3000/shop/search?name=L&kind=railroad&page=1 | 200: OK | [ { "id": 5, "name": "Lubowitz-O'Reilly", "industry": "Railroad Manufacture", "logo_url": "https://pigment.github.io/fake-logos/logos/medium/color/13.png", "slogan": "Configurable uniform circuit", "created_at": "2020-10-30T16:17:46.067Z", "updated_at": "2020-10-30T16:17:46.067Z" }, { "id": 21, "name": "Lockman Group", "industry": "Railroad Manufacture", "logo_url": "https://pigment.github.io/fake-logos/logos/medium/color/12.png", "slogan": "Multi-layered background product", "created_at": "2020-10-30T16:17:46.092Z", "updated_at": "2020-10-30T16:17:46.092Z" } ] | - | - |
 
 ## Setup/Installation Requirements
-
-To Access and Extend This Project:
 
 1. Install Rails
 - For this project, you will need Ruby. Follow the directions [here](https://www.learnhowtoprogram.com/ruby-and-rails/getting-started-with-ruby/ruby-installation-and-setup) for setting up Ruby.
