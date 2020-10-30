@@ -88,7 +88,7 @@ _Connect with me at vamariestewart@gmail.com with ideas to improve this project 
 
 * Ruby
 * Rails with Postgres
-* Ruby Gems: Factory Bot Rails, Faker, Kaminari, Launchy, Pry, PG, RSpec, Ruby-Limiter, Shoulda-Matchers
+* Ruby Gems: Factory Bot Rails, Faker, Kaminari, Launchy, Pry, PG, RSpec, Ruby-Limiter, Shoulda-Matchers, SimpleCov
 
 ### License
 
