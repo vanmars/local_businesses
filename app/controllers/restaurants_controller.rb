@@ -35,7 +35,7 @@ class RestaurantsController < ApplicationController
   end
 
   def random
-    @restaurant = Restaurant.random
+    @restaurant = Restaurant.all.sample
     json_response(@restaurant)
   end
 
