@@ -34,6 +34,14 @@ class RestaurantsController < ApplicationController
     end
   end
 
+  def random
+
+  end
+
+  def search
+    
+  end
+
 private
   def restaurant_params
     params.permit(:name, :kind, :description, :review)

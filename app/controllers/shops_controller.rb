@@ -34,6 +34,14 @@ class ShopsController < ApplicationController
     end
   end
 
+  def random
+
+  end
+
+  def search
+    
+  end
+
 private
   def shop_params
     params.permit(:name, :industry, :logo_url, :slogan)
