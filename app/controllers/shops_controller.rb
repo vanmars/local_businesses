@@ -40,7 +40,7 @@ class ShopsController < ApplicationController
   end
 
   def search
-    @shops = Shop.search(params[:search])
+    @shops = Shop.search(params[:name], params[:kind])
     json_response(@shops)
   end
 
@@ -53,5 +53,4 @@ private
     @shop = Shop.find(params[:id])
   end
   
-
 end
