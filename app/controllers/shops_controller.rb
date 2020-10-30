@@ -41,6 +41,9 @@ class ShopsController < ApplicationController
 
   def search
     @shops = Shop.search(params[:name], params[:kind])
+    if params[:page]
+      @shops = Shop.search(params[:name], params[:kind]).page(params[:page])
+    end
     json_response(@shops)
   end
 
