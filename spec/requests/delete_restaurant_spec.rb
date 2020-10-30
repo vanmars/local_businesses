@@ -19,7 +19,7 @@ let!(:restaurants) {
 
   # Test Body
   it 'returns successful delete message' do
-    expect(JSON.parse(response.body).values[0]).to eq("Restaurant successfully deleted.")
+    expect(JSON.parse(response.body)['message']).to eq("Restaurant successfully deleted.")
   end
-  
+
 end
