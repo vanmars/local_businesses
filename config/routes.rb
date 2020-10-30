@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   resources :shops
 
   # Custom Endpoints
-  get 'restaurants/random', to: 'restaurants#random'
-  get 'restaurants/search', to: 'restaurants#search'
+  get 'restaurant/random', to: 'restaurants#random'
+  get 'restaurant/search', to: 'restaurants#search'
 
-  get 'shops/random', to: 'shops#random'
-  get 'shops/search', to: 'shops#search'
+  get 'shop/random', to: 'shops#random'
+  get 'shop/search', to: 'shops#search'
 end

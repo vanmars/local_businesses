@@ -40,7 +40,7 @@ class RestaurantsController < ApplicationController
   end
 
   def search
-    @restaurants = Restaurant.search(params[:search])
+    @restaurants = Restaurant.search(params[:name], params[:kind])
     json_response(@restaurants)
   end
 
