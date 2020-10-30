@@ -4,4 +4,16 @@ class Restaurant < ApplicationRecord
 
   # Scopes
   scope :search, -> (restaurant_name, restaurant_kind) { where("name ilike ? AND kind ilike ?", "%#{restaurant_name}%", "%#{restaurant_kind}%") }
+
+  # Callbacks
+  before_save(:titleize, :capitalize)
+
+private
+  def titleize
+
+  end
+
+  def capitalize
+    
+  end
 end
