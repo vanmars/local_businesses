@@ -35,7 +35,7 @@ class ShopsController < ApplicationController
   end
 
   def random
-    @shop = Shop.random
+    @shop = Shop.all.sample
     json_response(@shop)
   end
 
