@@ -35,11 +35,13 @@ class ShopsController < ApplicationController
   end
 
   def random
-
+    @shop = Shop.random
+    json_response(@shop)
   end
 
   def search
-    
+    @shops = Shop.search(params[:search])
+    json_response(@shops)
   end
 
 private
@@ -51,5 +53,5 @@ private
     @shop = Shop.find(params[:id])
   end
   
-  
+
 end

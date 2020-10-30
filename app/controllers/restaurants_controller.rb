@@ -35,11 +35,13 @@ class RestaurantsController < ApplicationController
   end
 
   def random
-
+    @restaurant = Restaurant.random
+    json_response(@restaurant)
   end
 
   def search
-    
+    @restaurants = Restaurant.search(params[:search])
+    json_response(@restaurants)
   end
 
 private
