@@ -6,7 +6,7 @@ describe 'RestaurantsController#show', :type => :request do
     let!(:restaurants) { 
       [
         FactoryBot.create_list(:restaurant, 19),
-        FactoryBot.create(:restaurant, name: 'test_name', kind: 'test_kind', description: 'test_description', review: 'test_review', id: 20)
+        FactoryBot.create(:restaurant, name: 'test name', kind: 'test kind', description: 'test description', review: 'test review', id: 20)
       ]
     }
     before { get '/restaurants/20' }
@@ -16,10 +16,10 @@ describe 'RestaurantsController#show', :type => :request do
     end
     # Test Body
     it 'returns correct data' do
-      expect(JSON.parse(response.body)['name']).to eq('test_name')
-      expect(JSON.parse(response.body)['kind']).to eq('test_kind')
-      expect(JSON.parse(response.body)['description']).to eq('test_description')
-      expect(JSON.parse(response.body)['review']).to eq('test_review')
+      expect(JSON.parse(response.body)['name']).to eq('Test Name')
+      expect(JSON.parse(response.body)['kind']).to eq('Test Kind')
+      expect(JSON.parse(response.body)['description']).to eq('test description')
+      expect(JSON.parse(response.body)['review']).to eq('test review')
     end
   end
 

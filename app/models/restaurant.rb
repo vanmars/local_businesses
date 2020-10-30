@@ -10,10 +10,11 @@ class Restaurant < ApplicationRecord
 
 private
   def titleize
-
+    self.name = self.name.titleize
+    self.kind = self.kind.titleize
   end
 
   def capitalize
-    
+
   end
 end
