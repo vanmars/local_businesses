@@ -6,7 +6,7 @@ describe 'ShopsController#show', :type => :request do
     let!(:shops) { 
       [
         FactoryBot.create_list(:shop, 19),
-        FactoryBot.create(:shop, name: 'test_name', industry: 'test_industry', logo_url: 'test_logo_url', slogan: 'test_slogan', id: 20)
+        FactoryBot.create(:shop, name: 'test name', industry: 'test industry', logo_url: 'test logo_url', slogan: 'test slogan', id: 20)
       ]
     }
     before { get '/shops/20' }
@@ -16,10 +16,10 @@ describe 'ShopsController#show', :type => :request do
     end
     # Test Body
     it 'returns correct data' do
-      expect(JSON.parse(response.body)['name']).to eq('test_name')
-      expect(JSON.parse(response.body)['industry']).to eq('test_industry')
-      expect(JSON.parse(response.body)['logo_url']).to eq('test_logo_url')
-      expect(JSON.parse(response.body)['slogan']).to eq('test_slogan')
+      expect(JSON.parse(response.body)['name']).to eq('Test Name')
+      expect(JSON.parse(response.body)['industry']).to eq('Test Industry')
+      expect(JSON.parse(response.body)['logo_url']).to eq('test logo_url')
+      expect(JSON.parse(response.body)['slogan']).to eq('test slogan')
     end
   end
 

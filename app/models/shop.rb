@@ -10,8 +10,8 @@ class Shop < ApplicationRecord
 
 private
   def titleize
-    # self.name = self.name.titleize
-    # self.industry = self.kind.titleize
+    self.name = self.name.titleize
+    self.industry = self.industry.titleize
   end
 
   def capitalize

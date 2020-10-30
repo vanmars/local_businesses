@@ -3,17 +3,17 @@ require 'rails_helper'
 describe 'ShopsController#create', type: :request do
 
   context 'with successful call' do
-    before { post '/shops', params: { name: 'test_name', industry: 'test_industry', logo_url: 'test_logo_url', slogan: 'test_slogan' } }
+    before { post '/shops', params: { name: 'test name', industry: 'test industry', logo_url: 'test logo_url', slogan: 'test slogan' } }
     # Test Header
     it 'returns a created status' do
       expect(response).to have_http_status(:created)
     end
     # Test Body
     it 'returns correct content' do
-      expect(JSON.parse(response.body)['name']).to eq('test_name')
-      expect(JSON.parse(response.body)['industry']).to eq('test_industry')
-      expect(JSON.parse(response.body)['logo_url']).to eq('test_logo_url')
-      expect(JSON.parse(response.body)['slogan']).to eq('test_slogan')
+      expect(JSON.parse(response.body)['name']).to eq('Test Name')
+      expect(JSON.parse(response.body)['industry']).to eq('Test Industry')
+      expect(JSON.parse(response.body)['logo_url']).to eq('test logo_url')
+      expect(JSON.parse(response.body)['slogan']).to eq('test slogan')
     end
   end
 
