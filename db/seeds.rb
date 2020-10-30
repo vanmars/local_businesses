@@ -39,4 +39,6 @@ class Seed
   end
 end
 
+Restaurant.destroy_all
+Shop.destroy_all
 Seed.begin
