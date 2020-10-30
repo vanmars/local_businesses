@@ -8,7 +8,7 @@ FactoryBot.define do
 
   factory(:shop) do
     name { Faker::Company.name }
-    indsutry { Faker::Company.industry }
+    industry { Faker::Company.industry }
     logo_url { Faker::Company.logo }
     slogan { Faker::Company.catch_phrase }
   end
