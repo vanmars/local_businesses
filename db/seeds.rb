@@ -10,15 +10,15 @@ class Seed
 
   def self.begin
     seed = Seed.new
-    seed = seed.generate_restaurants
-    seed = seed.generate_shops
+    seed.generate_restaurants
+    seed.generate_shops
   end
 
   def generate_restaurants
     50.times do |i|
       restaurant = Restaurant.create!(
         name: Faker::Restaurant.name,
-        type: Faker::Restaurant.type,
+        kind: Faker::Restaurant.type,
         description: Faker::Restaurant.description,
         review: Faker::Restaurant.review
       )
