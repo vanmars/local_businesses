@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Restaurant#index', :type => :request do
+describe 'RestaurantsController#index', :type => :request do
   let!(:restaurants) { FactoryBot.create_list(:restaurant, 100) }
 
   # WITHOUT PAGINATION

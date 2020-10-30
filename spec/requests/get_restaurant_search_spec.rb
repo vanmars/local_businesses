@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Restaurants#search', :type => :request do
+describe 'RestaurantsController#search', :type => :request do
 
   context 'without search terms' do
     let!(:restaurants) { FactoryBot.create_list(:restaurant, 100) }
@@ -31,13 +31,15 @@ describe 'Restaurants#search', :type => :request do
   end
 
   context 'with search terms' do
-    let!(:restaurants) { [
-      FactoryBot.create_list(:restaurant, 100),
-      FactoryBot.create(:restaurant, name: 'Name_Test A', kind: 'Kind_Test A', description: 'test_description', review: 'test_review'),
-      FactoryBot.create(:restaurant, name: 'Name_Test B', kind: 'Kind_Test A', description: 'test_description', review: 'test_review'),
-      FactoryBot.create(:restaurant, name: 'Name_Test C', kind: 'Kind_Test B', description: 'test_description', review: 'test_review'),
-      FactoryBot.create(:restaurant, name: 'Name_Test D', kind: 'Kind_Test B', description: 'test_description', review: 'test_review'),
-    ] }
+    let!(:restaurants) { 
+      [
+        FactoryBot.create_list(:restaurant, 100),
+        FactoryBot.create(:restaurant, name: 'Name_Test A', kind: 'Kind_Test A', description: 'test_description', review: 'test_review'),
+        FactoryBot.create(:restaurant, name: 'Name_Test B', kind: 'Kind_Test A', description: 'test_description', review: 'test_review'),
+        FactoryBot.create(:restaurant, name: 'Name_Test C', kind: 'Kind_Test B', description: 'test_description', review: 'test_review'),
+        FactoryBot.create(:restaurant, name: 'Name_Test D', kind: 'Kind_Test B', description: 'test_description', review: 'test_review'),
+      ] 
+    }
 
     context 'with name search terms' do
       # WITHOUT PAGINATION

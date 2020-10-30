@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Restaurant#update', :type => :request do
+describe 'RestaurantsController#update', :type => :request do
   let!(:restaurants) { 
     [
       FactoryBot.create_list(:restaurant, 19),

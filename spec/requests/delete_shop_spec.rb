@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'Shop#destroy', :type => :request do
+describe 'ShopsController#destroy', :type => :request do
 let!(:shops) { 
   [
     FactoryBot.create_list(:shop, 19),

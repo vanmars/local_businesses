@@ -3,7 +3,7 @@ require 'rails_helper'
 #################
 # SUCCESSFUL CALL
 #################
-describe 'Restaurant#create', type: :request do
+describe 'RestaurantsController#create', type: :request do
 
   before { post '/restaurants', params: { name: 'test_name', kind: 'test_kind', description: 'test_description', review: 'test_review' } }
 
@@ -25,7 +25,7 @@ end
 ################################################
 # UNSUCCESSFUL CALL - Parameter Validations Fail
 ################################################
-describe 'Restaurant#create', type: :request do
+describe 'RestaurantsController#create', type: :request do
 
   before { post '/restaurants', params: { name: 'test_name'} }
 

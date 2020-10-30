@@ -3,7 +3,7 @@ require 'rails_helper'
 #################
 # SUCCESSFUL CALL
 #################
-describe 'Shop#create', type: :request do
+describe 'ShopsController#create', type: :request do
 
   before { post '/shops', params: { name: 'test_name', industry: 'test_industry', logo_url: 'test_logo_url', slogan: 'test_slogan' } }
 
@@ -25,7 +25,7 @@ end
 ################################################
 # UNSUCCESSFUL CALL - Parameter Validations Fail
 ################################################
-describe 'Shop#create', type: :request do
+describe 'ShopsController#create', type: :request do
 
   before { post '/shops', params: { name: 'test_name'} }
 

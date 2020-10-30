@@ -1,12 +1,11 @@
 require 'rails_helper'
 
-describe 'Restaurant#destroy', :type => :request do
-let!(:restaurants) { 
-  [
-    FactoryBot.create_list(:restaurant, 19),
-    FactoryBot.create(:restaurant, name: 'test_name', kind: 'test_kind', description: 'test_description', review: 'test_review', id: 20)
-  ]
-}
+describe 'RestaurantsController#destroy', :type => :request do
+  let!(:restaurants) { 
+    [
+      FactoryBot.create_list(:restaurant, 19),
+      FactoryBot.create(:restaurant, name: 'test_name', kind: 'test_kind', description: 'test_description', review: 'test_review', id: 20)
+    ]}
 
   before do
      delete '/restaurants/20'

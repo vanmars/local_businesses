@@ -3,7 +3,7 @@ require 'rails_helper'
 #################
 # SUCCESSFUL CALL
 #################
-describe 'Restaurant#show', :type => :request do
+describe 'RestaurantsController#show', :type => :request do
 
   let!(:restaurants) { 
     [
@@ -31,7 +31,7 @@ end
 ################################
 # UNSUCCESSFUL CALL - Invalid ID
 ################################
-describe 'Restaurant#show', :type => :request do
+describe 'RestaurantsController#show', :type => :request do
 
   let!(:restaurants) { FactoryBot.create_list(:restaurant, 20) }
 
