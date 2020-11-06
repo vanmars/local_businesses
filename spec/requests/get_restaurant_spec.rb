@@ -6,10 +6,10 @@ describe 'RestaurantsController#show', :type => :request do
     let!(:restaurants) { 
       [
         FactoryBot.create_list(:restaurant, 19),
-        FactoryBot.create(:restaurant, name: 'test name', kind: 'test kind', description: 'test description', review: 'test review', id: 20)
+        FactoryBot.create(:restaurant, name: 'test name', kind: 'test kind', description: 'test description', review: 'test review', id: 1)
       ]
     }
-    before { get '/restaurants/20' }
+    before { get '/restaurants/1' }
     # Test Header
     it 'returns status code 200' do
       expect(response).to have_http_status(:success)

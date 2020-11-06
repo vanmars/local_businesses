@@ -4,11 +4,11 @@ describe 'ShopsController#destroy', :type => :request do
   let!(:shops) { 
     [
       FactoryBot.create_list(:shop, 19),
-      FactoryBot.create(:shop, name: 'test_name', industry: 'test_industry', logo_url: 'test_logo_url', slogan: 'test_slogan', id: 20)
+      FactoryBot.create(:shop, name: 'test_name', industry: 'test_industry', logo_url: 'test_logo_url', slogan: 'test_slogan', id: 1)
     ]
   }
   before do
-     delete '/shops/20'
+     delete '/shops/1'
   end
   # Test Header
   it 'returns status code 200' do
